@@ -8,6 +8,12 @@ README
 
 ====================
 
+Link to active page:
+http://people.cam.cornell.edu/~zc227/extras/early2011mbp_graphics.html
+http://info.mbp2011.org/
+
+====================
+
 1. Organization: please follow these guidelines:
 	- images go in /img/
 	- html goes in /extras/
