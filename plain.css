@@ -1,0 +1,75 @@
+<style type="text/css">
+
+*{}
+
+body, table
+{
+	font-family:Avenir, Verdana, Geneva, sans-serif;
+	font-size:13px;
+}
+
+body
+{
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	/*
+	margin-top: 10px;
+	margin-right: 100px;
+	margin-bottom: 25px;
+	margin-left: 100px;
+	*/
+	background-color:#000;
+	/*background-image:url(img/stardust_bg.png);*/
+	/*background-image:url(img/gray_bg.jpg)*/
+}
+
+hr
+{
+	border-color:black;
+}
+
+a:link {color:#0029A3;}      /* unvisited link #900*/
+a:visited {color:#0029A3;}  /* visited link #900*/
+a:hover {color:#33CC33;}  /* mouse over link #006*/
+a:active {color:#33CC33;}  /* selected link #006*/
+
+div.mainbody
+{
+	width:800px;
+	text-align:left;
+	background-color:white;
+	padding:25px;
+	border:2px solid;
+	/*border-color:#000;*/
+	border-color:#ffffff;
+	justify-content: space-between;
+}
+
+img { 
+   border:1px solid #021a40;
+}
+
+img.noborder { 
+   border:0;
+}
+
+td.OH, th.OH {
+    border: 4px solid black;
+}
+
+table.OH {
+    border-collapse: collapse;
+}
+
+td.ST, th.ST {
+	font-size:: 10px;
+    border: 0px solid black;
+}
+
+table.ST {
+    border-collapse: collapse;
+}
+
+</style>

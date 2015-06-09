@@ -1,0 +1,557 @@
+
+<html>
+<head>
+<title>2011 Macbook Pro Discrete Graphics Card Failure</title>
+<link rel="stylesheet" type="text/css" href="../plain.css"> <!-- include CSS file -->
+<link rel="shortcut icon" href="../cu_icon.ico" type="image/x-icon" />
+<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+</head>
+<body>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+<center>
+<div class="mainbody">
+
+<center>
+<h1>2011 Macbook Pro Graphics Card Failure</h1>
+</center>
+
+<div align="right">
+<font size="1"><a href="http://info.mbp2011.org/" target="_new">info.mbp2011.org</a></font>
+</div>
+
+<hr />
+
+<div align="right"><font size="1"><i>Written on <b>05/14/14</b> by <a href="http://www.cam.cornell.edu/~zc227/">Zach Clawson</a></i></font></div>
+<hr />
+
+<br />
+<!--
+This is mostly for my own personal documentation, but I hope it helps others. I've been asked what to do by several friends or friends-of-friends whom this exact issue has happened to. I've had two logic board replacements (so far).
+
+<br /><br />
+-->
+
+<center>
+<div style="width: 675px; border: 10px solid;">
+<font color="red" style="font-size:17pt;"><b>Important Update [February 19, 2015]</b></font><br />
+<a href="http://www.apple.com/support/macbookpro-videoissues/" target="_new"><font style="font-size:12pt;"><b><img src="../img/DB_mbp.gif" style="border:0px" /> !! Link to Apple's Repair Page !! <img src="../img/DB_mbp.gif" style="border:0px" /></b></font></a>
+<br />
+<a href="http://mbp2011.org" target="_new"><font style="font-size:8pt;">[[Alt. link]]</font></a><br />
+<div align="left">
+<ul>
+<li />Apple has started a <a href="http://www.apple.com/support/macbookpro-videoissues/" target="_new">repair program</a> for <b>all 2011 MacBook Pro computers</b> experiencing this issue.
+<li />Mid-2012 through Early-2013 MacBook Pro computers are also covered for a similar issue.
+<li />Money spent to repair these computers (for graphics-related issues) will be <a href="https://getsupport.apple.com/ServiceOptionAction.action" target="_new">refunded by Apple</a>.
+<br />
+<br />
+<font style="font-size:11px;">
+<li /> The "repair" is to swap out the logic board with a new one. Apple is claiming that the new logic board is different and was designed "with this issue in mind."
+<li />Despite this, numerous users have already reported graphics glitches with these new boards. In fact, I can't count the number of emails I've gotten from people about this. Sorry I can't reply to all of you.
+<!--
+<li />
+<i>Apple is just doing a logic board swap on these machines. This isn't a permanent fix unless they are changing their materials and/or installation procedure. If you have any more details, <a href="mailto:skimnc@gmail.com" target="_new">email me</a>.</i>
+-->
+<li /><i>WBM LLP is still pursuing the lawsuit against Apple for this issue. <b>[</b><a href="http://ia902205.us.archive.org/19/items/gov.uscourts.cand.281728/gov.uscourts.cand.281728.docket.html" target="_new">Docket info</a> <b>|</b> <a href="http://www.wbmllp.com/news/wbm-expands-suit-on-apples-2011-macbook-pros" target="_new">WBM Expands suit</a><b>]</b></i>
+</font>
+</ul>
+</div>
+<!--
+<img src="../img/MA_mbp2011.gif" /> <br />
+-->
+<font style="font-size:8pt;">
+<b>Everything that follows was current before Feburary 19, 2015.</b><br />
+The content of this page will be posted to my github for others to update.
+<!--
+This page needs an overhaul. If anyone wants to help re-write / re-organize, <a href="mailto:skimnc@gmail.com" target="_new">email me</a>.
+-->
+<br />
+</font>
+</div>
+<!--
+<br />
+<font style="font-size:8pt;">
+Now that Apple has responded, I will be updating this page less frequently. <Br />
+Thanks to everyone who helped! You know who you are.
+</font>
+-->
+</center>
+
+<br />
+
+<hr />
+
+<br />
+
+<i>(Both 'Early' and 'Late') 2011 Macbook Pro</i> computers have been experiencing massive failures with their<b> discrete AMD graphics card (GPU)</b>. Early posts describing this issue date back to <i><a href="https://discussions.apple.com/thread/4766577" target="_new">February 1 2013</a></i> (and possibly earlier), where the screen displays horizontal/vertical distortions, restarts/shuts down (possibly with a message), and then won't boot past the Apple loading screen. This page will describe the <a href="#symptoms">symptoms</a>, <a href="#issue">why it occurs</a>, and how to come up with a <a href="#tempfix">temporary fix</a>. (Some 2010 and <a href="https://discussions.apple.com/thread/5300005" target="_new">2012</a> MBP users have also reported similar issues, but I'm only an expert on the 2011 models.)
+<br />
+<br />
+
+<!--
+<br/>
+
+Send me an email at <a href="mailto:skimnc@gmail.com" target="_new">skimnc@gmail.com</a> with anything you think should be added to this page. I may not be able to reply to everyone, but will do my best.
+-->
+
+
+
+
+<hr/>
+<table border="0" cellpadding="0" cellspacing="0" width="100%"><tr>
+<td align="left">
+<h2>Index</h2>
+
+<b>
+<ol start="1">
+<li /> <a href="#issue">The issue(s)</a>
+<li /> <a href="#symptoms">Symptoms</a>
+<li /> <a href="#document">Document your case online</a>
+<li /> <a href="#tempfix">Temporary fix</a>
+<li /> <a href="#permfix">Permanent fix</a>
+<li /> <a href="#prevent">Preventative steps</a>
+<li /> <a href="#stress">Stress testing</a>
+<li /> <a href="#lawsuit">Lawsuit information</a>
+<li /> <a href="#links">Outside links</a>
+<li /> <a href="#comments">User comments</a>
+</ol>
+</b>
+</td>
+<td align="right" valign="center">
+<img src="../img/MBP_GPU_logo.jpg" />
+</td>
+</tr></table>
+
+
+
+
+<hr />
+<a id="issue"></a>
+<h2>The issue(s)</h2>
+
+This issue is the <i>"perfect storm"</i> of heat inside your Macbook Pro. The AMD Radeon cards released with this model of the MBP run hot in the first place, but other pieces of hardware inside the machine do as well -- hence the storm of heat. Also, Apple is using way too much <i>thermal paste</i> on these GPUs (<a href="http://www.sharkyforums.com/showthread.php?231756-Can-too-much-thermal-paste-gel-compound-grease-cause-CPU-to-overheat" target="_new">known to cause overheating</a>), <a href="https://www.ifixit.com/Teardown/MacBook+Pro+15-Inch+Unibody+Early+2011+Teardown/4990#s22457" target="_new">see the picture here</a>!
+
+<br />
+<br />
+
+These days the solder used to attach the GPU to the logic board on Macs is no longer lead (due to <a href="http://ec.europa.eu/environment/waste/rohs_eee/index_en.htm" target="new">environmental reasons</a>), and has a more <a href="http://www.sigcon.com/Pubs/news/10_01.htm" target="_new"><em>volatile</em> melting point</a> (i.e. a wider range of values that causes instability in the solder, essentially making it extremely &quot;brittle&quot;). With the GPU heating up & cooling down as you use the computer day-to-day, in time this will cause the solder to "crumble" or break and make the card unusable. <a href="http://www.sigcon.com/Pubs/news/10_01.htm" target="new">"Tin Whiskers"</a> could also be playing some role in this.
+
+
+
+
+<hr />
+
+<a id="symptoms"></a>
+<h2>Symptoms</h2>
+
+You will be working on your computer using a more GPU-intensive application (Google Maps, Safari, Photoshop, the list goes on...) or have an external display plugged in. Your computer may suddenly "blank" into horizontal lines:
+
+<br /><br />
+
+<center>
+<img src="../img/MBP_GPU_horiz.png" />
+<br />
+<font color="gray" style="font-size:8pt;">Screenshot of MacBook Pro graphics issue.<br/>Source: Apple Support Communities forum member "Andy_Gee"</font>
+</center>
+
+<br />
+
+Your computer will restart. You may see a message that told you you had to restart. Your computer may restart and work normally. This pattern will continue until you get a "permanent failure" where you cannot boot past the Apple loading screen. After a permanent failure, different restart procedures will produce a (slightly) different result. <a href="http://youtu.be/l5kP6MF6fKY" target="_new">This video</a> shows you what to expect, and each case is written out below:
+
+<ol>
+<li /> <b>Normal startup:</b> Your computer will boot, show the Apple logo + pinwheel, and then go to a white/gray-ish screen and remain there. You must <i>force reboot</i> (hold the power buttond down).
+<li /> <b>Safe mode startup:</b> While booting the computer hold the <tt>Shift</tt> key until you see the Apple logo + progress indicator. About 60% of the way through the progress indicator your computer will go to a blue screen with horizontal lines.
+<li /> <b>Recovery mode startup:</b> While booting hold down <tt>Command</tt> + <tt>R</tt>. You should get to a screen that shows the option of which drive to boot from. Any selection will result in the same blue screen with horizontal lines as in the <i>Safe mode startup</i>.
+<li /> <b>Console mode startup:</b> While booting hold down <tt>Command</tt> + <tt>S</tt> to boot in console mode. You might see distorted colors in your console (mine had blue lines, some have had red lines). We'll get back to how to use this mode to get your computer somewhat functional, but for now type <tt>sudo shutdown -h now</tt> to shutdown, or <tt>sudo reboot</tt>.
+</ol>
+
+<i>Early symptoms</i> include:
+<ul>
+<li /> Overheating when running graphics-intensive web sites, which causes the fans to loudly run
+<li /> Random crashes with different solid-screen-colors showing up (black, blue, gray)
+<li /> Random graphics glitches
+<li /> Graphics distortions when plugging in an external monitor
+</ul>
+
+<font size="1"><i>Note that this in no way is conclusive testing / evidence to see if you are or are not affected by this bug. But if this is happening to you verbatim, it is likely your GPU.</i></font>
+
+
+
+
+
+
+<hr />
+<a id="document"></a>
+<h2>Document your case online</h2>
+
+<ul>
+<li /> <b>***<a href="http://www.apple.com/feedback/macbookpro.html" target="_new">Send Feedback to Apple</a>:***</b><br />
+This is the most important. <b>IF</b> there is going to be a replacement program, you're going to have to start an official case with them. Might as well do it now. This will also help Apple diagnose the issue (we want a permanent fix, right?). They probably already have, but <b>officially document your case</b>!!!
+<li /> <b><a href="http://www.change.org/en-AU/petitions/timothy-d-cook-replace-or-fix-all-early-2011-macbook-pro-with-graphics-failure" target="_new">Sign this petition</a>:</b> While this likely won't amount to much, it made me feel better.
+<li /> <b><a href="https://docs.google.com/forms/d/1PuJ2QS2Ri7fw9HVaNHLQ4OYZCb99zonc96HmhTWEAoY/viewform" target="_new">Fill out this survey</a>:</b> This will help collect the statistics to better diagnose & fix the issue.
+<li /> <b><a href="https://discussions.apple.com/thread/4766577" target="_new">Post on this thread</a>:</b> The bigger this thread gets, the more Apple has to notice it.
+</ul>
+
+<center>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sKn8D5cIU0g" frameborder="0" allowfullscreen></iframe>
+</center>
+
+<ul>
+<li /> <a href="mailto:tcook@apple.com" target="_new">Email Tim Cook (Apple CEO)</a>
+<li /> <a href="https://twitter.com/tim_cook" target="_new">Tweet at Tim Cook (Apple CEO)</a>
+<li /> <a href="https://www.facebook.com/groups/2011mbp/" target="_new">Join the Facebook group</a>
+<li /> <a href="https://twitter.com/mbp2011_" target="_new">Follow the Twitter account</a>
+</ul>
+
+
+
+
+<hr />
+<a id="tempfix"></a>
+<h2>Temporary fix</h2>
+
+Since the issue is with the <i>AMD Radeon GPU</i> chip, you'll need to "trick" your computer to only use the <i>integrated Intel GPU</i> only. This can be accomplished by hiding (some or all of) the AMD GPU driver files from the system. I don't take credit for this solution, numerous sites and forum posts provide it. If you follow the directions explicitly this is a safe and reversible procedure. Also please note this is NOT NOT NOT a permanent fix. Your computer will still act up in fairly random ways, but at least you can boot it.
+
+<ol>
+<li /> <b>Start in console mode:</b> Start your computer holding <tt>Command</tt> + <tt>S</tt>
+<li /> <b>Mount the hard drive:</b> Once there, type <tt>mount -uw /</tt>
+<li /> <b>Create a backup directory:</b> From the root directory (where you should be), type:
+	<br/>
+	<tt>mkdir /Users/your_user_name/AMDDriverBackup</tt>
+<li /> <b>Move the files:</b> To move all of the files type:
+	<br />
+	<tt>mv /System/Library/Extensions/ATI* /Users/your_user_name/AMDDriverBackup</tt>
+    <br />
+	<tt>mv /System/Library/Extensions/AMD* /Users/your_user_name/AMDDriverBackup</tt>
+    <br /><br />
+    Moving just two of the files initially worked for me, but I had to revert to moving all of them with time (not sure why). Moving just <tt>ATIRadeonX2000.kext</tt> and <tt>ATIRadeonX2000GLDriver.bundle</tt> were all it took.
+<li /> <b>Restart:</b> Type <tt>sudo reboot</tt> to restart, or <tt>sudo shutdown -h now</tt> to shutdown.
+</ol>
+
+<center>
+<img src="../img/mbp_directions.png">
+</center>
+<br />
+
+You should now be able to boot your computer into a state where you can do basic web browsing and word processing. Most importantly, it's an easy way to get your files.
+
+<br /><br />
+
+Some recommend installing and using <a href="http://gfx.io/" target="_new">gfxCardStatus</a> and <a href="http://www.macupdate.com/app/mac/23049/smcfancontrol" target="_new">smcFanControl</a> to help regulate your computer's fans & choice of graphics card. More details in the <a href="prevent">Fixed computer: Preventative steps</a> section.
+
+<h3>Reverse above "fix"</h3>
+To <b>reverse</b> the procedure above, simply repeat, <i>skip Step 3</i>, and change <i>Step 4</i> to:
+<ul>
+<li /><tt>mv /Users/your_user_name/AMDDriverBackup/A* /System/Library/Extensions</tt>
+</ul>
+
+<h3>File system check</h3>
+
+Performing a file system check also helped get my computer booted at times:
+
+<ol>
+<li /> <b>Start in console mode:</b> Start your computer holding <tt>Command</tt> + <tt>S</tt>
+<li /> <i>Mount the hard drive (Optional):</i> Type <tt>mount -uw /</tt> (Sometimes this produced slightly different results.)
+<li /> <b>Perform check:</b> Type <tt>fsck -f</tt>
+<li /> <b>Restart:</b> Type <tt>sudo reboot</tt> to restart, or <tt>sudo shutdown -h now</tt> to shutdown.
+</ol>
+
+
+<h3>PRAM reset</h3>
+
+<a href="http://support.apple.com/kb/ht1379" target="_new">Resetting your PRAM</a> can help. To do so hold down <tt>Command</tt> + <tt>Option</tt> + <tt>P</tt> + <tt>R</tt> on bootup. 
+
+
+
+
+
+<hr />
+<a id="permfix"></a>
+<h2>Permanent fix</h2>
+
+You have several options to permanently fix your computer. It should be noted that the only true permanent solution is to <i>reball</i> your GPU, but keep reading before you do that.
+<br />
+<br />
+I recommend taking the flat-rate repair and then attempt to recreate the issue until Apple replaces your computer with a newer model. This <a href="http://youtu.be/QRrUx3RbNl0?t=1m19s" target="new">video</a> outlines my sentiments.
+
+<ol>
+<li /> <b>Flat-rate repair [US only]:</b>
+	<ul>
+    <li /> The base rate is $310, but is actually ~$360 with shipping and taxes.
+    <li /> They will replace any faulty parts on an out-of-warranty machine for this flat-rate cost.
+    <li /> The whole process takes about 3 days.
+    <li /> To get this option you can:
+    	<ul>
+        <li /> Go to an Apple store
+        <li /> Call into customer service (if there are fees you can request an exception -- you'll get it)
+        <li /> Email <a href="malto:tcook@apple.com" target="_new">Tim Cook</a> & wait for a call from executive relations.
+        </ul>
+    </ul>
+<li /> <b>In-store repair:</b> You will be told that your logic board must be replaced, costing somewhere around $1000 in-store. <i>I was not offered the flat-rate repair option in-store, so you should absolutely ask about that if they give you this bad news.</i>
+<li /> <b>Reflow or reball:</b>
+	<ul>
+	<li /> <i>Reflowing</i> is a process where you heat up your graphics card to remelt the solder. This can be done with a hairdryer or oven. I don't recommend this but you can Google it for instructions.
+	<li /> <i>Reballing</i> is a permanent-fix option you have to fully resolve this issue without it likely reoccuring. Essentially they will replace your graphics card with a new one and use a stronger lead solder. This will cost about $200. Unfortunately, if you are hoping for a replacement program from Apple this will likely void your eligibility.
+	</ul>
+</ol>
+
+
+<h3>EU Customers</h3>
+EU customers are covered under the <a href="http://europa.eu/legislation_summaries/consumers/protection_of_consumers/l32022_en.htm" target="_new">EU Consumer Goods Law</a>. An Apple user "Barry the Fish" has reported to me that:
+<ul>
+<li /> They used the phrase "Consumer Law Coverage" when replacing his logic board for free.
+<li /> On the second failure they used the phrase "Consumer Law Repeat Coverage"
+<li /> After the second failure he received a (likely refurbished) "2014 Retina MBP 2.5GHz / 16GB RAM / 512GB flash / Iris Pro + NVIDIA GT750M with 2BG RAM"
+<li /> His followup email had the subject line "APPLE DECLINED REPAIR-INT"
+</ul>
+
+
+
+
+<hr />
+<a id="prevent"></a>
+<h2>Preventative steps</h2>
+
+If through any of the steps above you have been able to fix your computer you can take a few preventative steps to hopefully stop this issue from reoccuring.
+<br /> <br />
+Installing the following (free) programs can help:
+
+<ul>
+<li /> <b><a href="http://gfx.io/" target="_new">gfxCardStatus</a>:</b> This will allow for you to select whether you want to use only the <i>Integrated</i> or <i>Discrete</i> chip, or allow for the default <i>Dynamic</i> switching.
+<li /> <b><a href="http://www.macupdate.com/app/mac/23049/smcfancontrol" target="_new">smcFanControl</a>:</b> This will display your internal computer temperature and the fan rates in RPM. You have the option to turn the fans on a higher setting if you want.
+</ul>
+
+<hr />
+<a id="stress"></a>
+<h2>Stress testing</h2>
+
+If you get your computer fixed by Apple you will receive a 90-day warranty. Since the real issue isn't fixed by swapping out the logic board, you may want to try to recreate the issue within the 90-day timeframe. My research indicates that EU customers get a replacement after the second failure, and US customers after the third.
+<br/><br/>
+Some of the GPU stress-testing applications I've toyed with are:
+<ul>
+<li /> <a href="http://unigine.com/products/heaven/" target="_new"><b>Heaven benchmark</b></a>
+<li /> <a href="http://www.geeks3d.com/20130507/gputest-0-4-0-cross-platform-opengl-benchmark-released-opengl-4-tessellation-test-enabled-under-mac-osx/" target="_new"><b>GpuTest 0.4.0</b></a>
+<li /> <a href="http://www.geeks3d.com/gputest/" target="_new"><b>GpuTest 0.6.0</b></a>
+</ul>
+I recommend the same <b>GpuTest</b> settings described by <a href="https://www.youtube.com/user/rossmanngroup" target="_new">Louis Rossmann</a> <a href="http://youtu.be/QRrUx3RbNl0" target="new">here</a>:
+<ul>
+<li /> You may want to disable your "energy saving" settings and the screensaver.
+<li /> Run FurMark in "Fullscreen" mode with your computer's resolution and "8X MSAA antialiasing" turned on.
+<li /> Either:
+	<ul>
+    <li /> <b>Run this continuously</b> until your computer fails
+    <li /> <b>Run this before going to bed</b>, going to the store, etc...
+    </ul>
+<li /> The average failure rate after a logic board swap is 5-6 months (sampled only from people who have experienced a second failure).
+<li /> <i>Really want to kill it?</i> Connect to an external monitor/TV and use GpuTest on both at once.
+</ul>
+
+
+
+
+
+<hr />
+<a id="lawsuit"></a>
+<h2>Class action lawsuit against Apple</h2>
+
+Apple is being sued by WBM LLP in a class-action lawsuit because of this issue. Here are all of the relevant links:
+<ul>
+<li /> <a href="http://www.wbmllp.com/news/class-action-filed-against-apple-for-defective-2011-macbook-pro-laptops" target="_new"><b>First class-action lawsuit against Apple [CA, FL]</b></a> -- filed by Whitfield, Bryson, and Mason (WBM) LLP
+<li /> <a href="http://www.wbmllp.com/news/wbm-expands-suit-on-apples-2011-macbook-pros" target="_new">WBM expands suit to [CO, IL, IN, PR, VT]</a>
+<li /> <a href="http://ia902205.us.archive.org/19/items/gov.uscourts.cand.281728/gov.uscourts.cand.281728.docket.html" target="_new">Lawsuit docket information; i.e. updates (in tabular format)</a>
+<li /> <a href="http://files.www.wbmllp.com/news/class-action-filed-against-apple-for-defective-2011-macbook-pro-laptops/mbp2011_Filed_Complaint.pdf" target="_new">Actual transcript of lawsuit filed</a>
+<li /> <a href="https://www.surveymonkey.com/s/2011MBP" target="_new">Survey from law firm for affected users to fill out</a>
+</ul>
+
+
+<hr />
+
+<center><font size="1">
+<a href="http://opensource.org/licenses/MIT" target="_blank"><img src="http://img.shields.io/badge/license-MIT-brightgreen.svg" style="border:0px" /></a>
+</font></center>
+
+
+
+
+<hr />
+<a id="links"></a>
+<h2>Outside links</h2>
+
+<h3>Most important links:</h3>
+<ul> 
+<li /> <a href="https://discussions.apple.com/thread/4766577" target="_new"><b>Apple Forums main thread</b></a> 02/01/2013
+<li /> <a href="http://time.com/3545723/apple-macbook-lawsuit/" target="_new"><b>TIME Magazine</b> article</a> from 10/29/2014
+</ul>
+
+<h3>Lawsuit related</h3>
+<ul>
+<li /> <a href="http://www.wbmllp.com/news/class-action-filed-against-apple-for-defective-2011-macbook-pro-laptops" target="_new"><b>First class-action lawsuit against Apple (CA, FL)</b></a> -- filed by Whitfield, Bryson, and Mason LLP
+<li /> <a href="http://files.www.wbmllp.com/news/class-action-filed-against-apple-for-defective-2011-macbook-pro-laptops/mbp2011_Filed_Complaint.pdf" target="_new">Actual transcript of lawsuit filed</a>
+<li /> <a href="https://www.surveymonkey.com/s/2011MBP" target="_new">Survey from law firm for affected users to fill out</a>
+</ul>
+
+
+<h3>Unleaded solder related</h3>
+<ul>
+<li /> <a href="http://www.sigcon.com/Pubs/news/10_01.htm" target="_new"><b>Great article about the lead-free initiative and why it's bad</b></a>
+<li /> <a href="http://www.ixys.com/Documents/DesignResource/LEADFREE.pdf" target="_new">Scientific article explaining the difference</a>
+</ul>
+
+<h3>Forum posts</h3>
+
+<ul>
+<li /> <a href="https://discussions.apple.com/thread/4766577" target="_new"><b>Apple Forums main thread</b></a> 02/01/2013
+<li /> <a href="https://discussions.apple.com/message/23428004" target="_new">Apple Forums thread</a> 10/17/2013
+<li /> <a href="https://discussions.apple.com/thread/4637833" target="_new">Apple Forums thread</a> 12/12/2013
+<li /> <a href="http://beta.slashdot.org/story/197025" target="_new">Slashdot Post</a> 01/17/2014
+<li /> <a href="http://www.reddit.com/r/applehelp/comments/1axr6c/discrete_graphics_card_causing_crashes_in_1083/" target="_new">Reddit post</a> 03/2013
+<li /> <a href="http://www.reddit.com/r/applehelp/comments/1kjkhl/is_my_graphics_card_failing/" target="_new">Reddit post</a> 08/2013
+<li /> <a href="http://www.reddit.com/r/apple/comments/1lt38x/discrete_graphics_cards_in_2011_macbook_pros_are/" target="_new">Reddit post</a> 09/2013
+<li /> <a href="http://www.reddit.com/r/applehelp/comments/1ozyic/failed_mbp_early_2011_gpu_help_with_temporary_fix/" target="_new">Reddit post</a> 10/2013
+<li /> <a href="http://www.reddit.com/r/applehelp/comments/1pdq9t/here_we_go_again_15_mbp_on_the_fritz/" target="_new">Reddit post</a> 10/2013
+<li /> <a href="http://www.reddit.com/r/applehelp/comments/1s0aau/late2011_mbp_mac_distorted_picture_win7_blue/" target="_new">Reddit post</a> 01/2014
+<li /> <a href="http://www.reddit.com/r/apple/comments/1vfyki/2011_macbook_pros_are_all_beginning_to_fail_23/" target="_new"><b>Reddit post</b></a> 01/2014
+<li /> <a href="http://www.reddit.com/r/apple/comments/1vpo6d/early2011_macbook_pro_owners_report_hardware/" target="_new">Reddit post</a> 01/2014
+<li /> <a href="http://www.reddit.com/r/applehelp/comments/21mbb7/if_you_have_a_macbookpro_2011_with_a_graphics/" target="_new">Reddit post</a> 03/2014
+<li /> <a href="http://www.reddit.com/r/applehelp/comments/21m5q1/early_2011_mac_discrete_graphics_card_failure/" target="_new">Reddit post</a> 03/2014
+</ul>
+
+<h3>Articles from 10/28/14 <font size="1"><i>(after the media found out about the lawsuit)</i></font></h3>
+Credit to Tyrexius J&auml;ger for compiling this. (Taken from the <a href="https://www.facebook.com/groups/2011mbp/" target="_new">Facebook Group</a>).<br />
+<ul>
+<li /> <a href="http://www.businessinsider.com/some-macbooks-owners-sue-apple-2014-10" target="_new">Business Insider</a>
+<li /><a href="http://appleinsider.com/articles/14/10/28/apple-hit-with-class-action-lawsuit-over-2011-macbook-pro-graphics-failures" target="_new">Apple Insider</a>
+<li /> <a href="http://www.cultofmac.com/301334/glitchy-macbook-pros-doomed-start-lawyer-claims/" target="_new">Cult of Mac</a>
+<li /> <a href="http://www.macrumors.com/2014/10/28/macbook-pro-2011-graphics-lawsuit/" target="new">Mac Rumors</a>
+<li /> <a href="http://9to5mac.com/2014/10/28/apple-class-action-lawsuit-2011-macbook-pro-gpu-graphics-issues/" target="_new">9 to 5 Mac</a>
+<li /> <a href="http://bgr.com/2014/10/28/2011-macbook-pro-class-action-suit/" target="_new">BGR</a>
+<li /> <a href="http://www.slashgear.com/apple-facing-lawsuit-over-2011-macbook-pro-gpu-28352812/" target="_new">SlashGear</a>
+<li /> <a href="http://consumerist.com/2014/10/28/owners-of-macbooks-with-self-destructing-video-cards-file-class-action-lawsuit/" target="_new">Consumerist</a>
+<li />  <a href="http://www.marketwatch.com/story/whitfield-bryson-mason-llp-files-class-action-against-apple-inc-for-defective-2011-macbook-pro-laptops-2014-10-28?reflink=MW_news_stmp" target="_new">Market Watch</a>
+<li /> <a href="http://www.iclarified.com/44951/class-action-lawsuit-filed-against-apple-over-defective-graphics-in-the-2011-macbook-pro" target="_new">iClarified</a>
+<li /> <a href="http://www.powerpage.org/users-levy-class-action-law-suit-against-apple-for-mid-2011-macbook-pro-gpu-failures" target="_new">PowerPage</a>
+<li /> <a href="http://investorplace.com/2014/10/2011-macbook-pro-lawsuit-apple-rumors-aapl/" target="_new">Inverstor Place</a>
+<li /> <a href="http://www.prnewswire.com/news-releases/whitfield-bryson--mason-llp-files-class-action-against-apple-inc-for-defective-2011-macbook-pro-laptops-280698962.html" target="_new">PR NewsWire</a>
+<li /> <a href="http://digitaljournal.com/pr/2290502" target="_new">Digital Journal</a>
+<li /> <a href="http://www.ubergizmo.com/2014/10/class-action-lawsuit-filed-against-apple-over-2011-macbook-pro-issues/" target="_new">Uber Gizmo</a>  
+</ul>
+
+<h3>Articles</h3>
+
+
+
+<ul>
+<li /> <b><a href="http://www.macrumors.com/2013/08/16/apple-initiates-graphic-card-replacement-program-for-mid-2011-27-inch-imac/" target="_new">MacRumors Article</a></b> 08/16/2013
+<li /> <a href="http://appleinsider.com/articles/13/10/14/apples-2011-macbook-pro-lineup-suffering-from-sporadic-gpu-failures" target="_new">AppleInsider Article</a> 10/14/2013
+<li /> <a href="http://modmyi.com/content/12490-gpu-failure-issues-surface-apple-s-early-2011-macbook-pro-lineup.html" target="_new">ModMyi Article</a> 10/14/2013
+<li /> <a href="http://www.mactrast.com/2013/10/owners-early-2011-macbook-pro/" target="_new">MacTrast Article</a> 10/15/2013
+<li /> <a href="http://appleinsider.com/articles/14/01/16/owners-of-late-2011-macbook-pros-report-critical-gpu-failures-system-crashes" target="_new">AppleInsider Article</a> 10/16/2013
+<li /> <a href="http://www.asyncro.com/2013/12/12/macbook-pro-discreate-graphics-card-issue-fix/" target="_new">Blog post with a fix similar to the one here</a> 12/12/2013
+<li /> <a href="http://www.cultofmac.com/262861/early-2011-macbook-pros-dropping-like-flies-heat-issues-blame/" target="_new">Cult of Mac Article</a> 01/17/2014
+<li /> <a href="http://www.macrumors.com/2014/01/17/2011-macbook-pro-gpu-glitches/" target="_new">MacRumors Article</a> 01/17/2014
+<li /> <a href="http://www.digitaltrends.com/computing/suddenly-bunch-early-2011-macbook-pro-owners-running-video-problems/" target="_new">Digital Trends Article</a> 01/17/2014
+<li /> <a href="http://www.techrepublic.com/blog/apple-in-the-enterprise/internet-reports-suggest-possible-2011-macbook-pro-graphics-issue/#." target="_new">TechRepublic Article</a> 01/27/2014
+<li /> <b><a href="http://appleinsider.com/articles/14/05/13/apple-remains-mum-as-complaints-mount-over-2011-macbook-pro-gpu-failures" target="_new">AppleInsider Article</a></b> 05/13/2014
+<li /> <a href="http://www.ubergizmo.com/2014/05/2011-macbook-pro-owners-launch-petition-over-defective-gpu/" target="_new">Ubergizmo Article</a> 05/13/2014
+<li /> <a href="http://www.macworld.co.uk/news/mac/widespread-2011-macbook-pro-failures-continue-3497935/" target="_new">MacWorld Article</a> 08/22/2014
+<li /> <a href="http://www.infoworld.com/article/2608791/tech-support/support-letdowns-tarnish-apple-s-sterling-quality.html" target="_new">InfoWorld Article</a> 08/26/2014
+</ul>
+
+
+<h3>Other</h3>
+
+<ul>
+<li /> <a href="http://en.wikipedia.org/wiki/MacBook_Pro#Early_2011_model_GPU_Issues" target="_new">Wikipedia entry on the MBP page about this</a>
+<li /> <a href="http://sdqk.me/31KHyZDa" target="_new">SideQik page with ways to make your voice be heard</a>
+<li /> <b><a href="http://support.apple.com/kb/TS5167" target="_new">iMac Replacement Program</a>:</b> Apple's page on the replacement program for this issue occuring in iMacs.
+<li /> <b><a href="http://breakfree.cc/" target="_new">Photos of the issue</a>:</b> Over 100 photos of the issue
+<li /> <a href="http://imgur.com/a/Ng2py" target="_new">More photos of the issue</a> 01/2014
+<li /> <a href="https://www.facebook.com/MBPDiscretegraphics" target="_new">Like the Facebook page</a>
+<li /> <a href="https://www.facebook.com/groups/2011mbp/" target="_new">Join the Facebook group</a>
+<li /> <b><a href="http://www.change.org/en-AU/petitions/timothy-d-cook-replace-or-fix-all-early-2011-macbook-pro-with-graphics-failure" target="_new">Petition</a></b>
+<li /> <b><a href="https://docs.google.com/forms/d/1PuJ2QS2Ri7fw9HVaNHLQ4OYZCb99zonc96HmhTWEAoY/viewform" target="_new">Survey</a></b>
+<li /> <a href="http://www.reddit.com/user/TheTerminatorQc" target="_new">Reddit account of an Apple Tech</a>
+<li /> <a href="http://youtu.be/vyoEMPKC_rg" target="_new">YouTube video</a> showing the issue while running
+<li /> <a href="http://youtu.be/l5kP6MF6fKY" target="_new">YouTube video</a> showing the issues on startup
+<li /> <a href="http://youtu.be/sKn8D5cIU0g" target="_new">YouTube video</a> -- a parody of an Apple commercial, but for 2011 MBPs
+<li /> <a href="http://youtu.be/zKVO9BZZIJw" target="_new">YouTube video</a> -- frustrated user trying to talk to Apple support
+</ul>
+
+
+
+<hr />
+
+<center>
+<!-- Counter Code START -->
+<b>Unique visitors to this article:</b>
+<br/>
+<img src="http://www.e-zeeinternet.com/count.php?page=1061254&style=default&nbdigits=6" border="0" >
+<!-- Counter Code END -->
+<!--
+<br/><br/>
+<font size="1">
+<b>Milestones:</b><br />
+<table border="1" cellpading="0" cellspacing="0" style="font-size=10px;" class="OH">
+<tr>
+<td>0</td>
+<td>05/14/2014</td>
+</tr>
+<tr>
+<td>1,000</td>
+<td></td>
+</tr>
+<tr>
+<td>10,000</td>
+<td>12/05/2014</td>
+</tr>
+<tr>
+<td>20,000</td>
+<td>01/21/2015</td>
+</tr>
+</table>
+</font>
+-->
+
+<hr />
+
+<font size="1"><i>Last updated:
+     <script language="JavaScript">
+     document.write(document.lastModified);
+     </script> </i></font>
+</center>
+
+
+
+<hr />
+
+<center>
+<b>Contributors<br/><font size="1">(if you emailed me and it helped this page)</font></b> <Br />
+<tt>Barry the Fish, James McCarthy, Mike Pfaff, Adam Sullivan, Ren&eacute;e, Ivan Valtchanov, WBM LLP</tt>
+</center>
+
+
+
+
+<hr />
+<a id="comments"></a>
+<h2>User Comments</h2>
+
+<center>
+<div class="fb-comments" data-href="https://people.cam.cornell.edu/~zc227/extras/early2011mbp_graphics.html" data-width="700" data-numposts="15" data-colorscheme="light"></div>
+</center>
+
+
+
+</div>
+</center>
+</body>
+</html>
