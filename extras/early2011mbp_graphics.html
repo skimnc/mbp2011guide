@@ -2,9 +2,19 @@
 <html>
 <head>
 <title>2011 Macbook Pro Discrete Graphics Card Failure</title>
-<link rel="stylesheet" type="text/css" href="../plain.css"> <!-- include CSS file -->
+
+<!--<link rel="stylesheet" type="text/css" href="../plain.css">-->
+<!-- include CSS file -->
+
 <link rel="shortcut icon" href="../cu_icon.ico" type="image/x-icon" />
 <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
+
+<!-- Bootstrap core CSS -->
+<link href="../dist/css/bootstrap.min.css" rel="stylesheet" />
+
+<!-- Custom styles for this template -->
+<link href="../css/jumbotron-narrow.css" rel="stylesheet" />
+
 </head>
 <body>
 <div id="fb-root"></div>
@@ -20,22 +30,41 @@
 
 
 <center>
-<div class="mainbody">
+<div class="container" align="left">
+
+
+<div class="jumbotron">
 
 <center>
 <h1>2011 Macbook Pro Graphics Card Failure</h1>
 </center>
 
-<div align="right">
+<hr />
+
+<div class="row">
+<div align="left" class="col-sm-6">
 <font size="1"><a href="http://info.mbp2011.org/" target="_new">info.mbp2011.org</a></font>
+</div>
+
+<div align="right" class="col-sm-6"><font size="1"><i>
+by <a href="http://www.cam.cornell.edu/~zc227/" target="_blank">Zach Clawson</a> <br />
+Written on <b>5/14/14</b></i></font> <br />
+<font size="1"><i>Last updated on <b>
+<script language="JavaScript">
+update = new Date(document.lastModified)
+theMonth = update.getMonth() + 1
+theDate = update.getDate()
+theYear = update.getFullYear()
+document.writeln(theMonth + "/" + theDate + "/" + theYear)
+</script>
+</b></i></font>
+</div>
 </div>
 
 <hr />
 
-<div align="right"><font size="1"><i>Written on <b>05/14/14</b> by <a href="http://www.cam.cornell.edu/~zc227/">Zach Clawson</a></i></font></div>
-<hr />
-
 <center>
+I don't have the time to maintain this page anymore. <br />
 <b>
 If you'd like to contribute to this page, consider updating the <a href="https://github.com/skimnc/mbp2011guide" target="_blank"><tt>github/skimnc/mbp2011guide</tt></a> repo.
 </b>
@@ -43,7 +72,6 @@ If you'd like to contribute to this page, consider updating the <a href="https:/
 
 <hr />
 
-<br />
 <!--
 This is mostly for my own personal documentation, but I hope it helps others. I've been asked what to do by several friends or friends-of-friends whom this exact issue has happened to. I've had two logic board replacements (so far).
 
@@ -53,7 +81,7 @@ This is mostly for my own personal documentation, but I hope it helps others. I'
 <center>
 <div style="width: 675px; border: 10px solid;">
 <font color="red" style="font-size:17pt;"><b>Important Update [February 19, 2015]</b></font><br />
-<a href="http://www.apple.com/support/macbookpro-videoissues/" target="_new"><font style="font-size:12pt;"><b><img src="../img/DB_mbp.gif" style="border:0px" /> !! Link to Apple's Repair Page !! <img src="../img/DB_mbp.gif" style="border:0px" /></b></font></a>
+<a href="http://www.apple.com/support/macbookpro-videoissues/" target="_new"><font style="font-size:12pt;"><b>!! Link to Apple's Repair Page !!</b></font></a>
 <br />
 <a href="http://mbp2011.org" target="_new"><font style="font-size:8pt;">[[Alt. link]]</font></a><br />
 <div align="left">
@@ -82,7 +110,6 @@ This is mostly for my own personal documentation, but I hope it helps others. I'
 <!--
 This page needs an overhaul. If anyone wants to help re-write / re-organize, <a href="mailto:skimnc@gmail.com" target="_new">email me</a>.
 -->
-<br />
 </font>
 </div>
 <!--
@@ -94,7 +121,7 @@ Thanks to everyone who helped! You know who you are.
 -->
 </center>
 
-<br />
+</div>
 
 <hr />
 
@@ -134,7 +161,7 @@ Send me an email at <a href="mailto:skimnc@gmail.com" target="_new">skimnc@gmail
 </b>
 </td>
 <td align="right" valign="center">
-<img src="../img/MBP_GPU_logo.jpg" />
+<img src="img/MBP_GPU_logo.jpg" />
 </td>
 </tr></table>
 
@@ -165,7 +192,7 @@ You will be working on your computer using a more GPU-intensive application (Goo
 <br /><br />
 
 <center>
-<img src="../img/MBP_GPU_horiz.png" />
+<img src="img/MBP_GPU_horiz.png" />
 <br />
 <font color="gray" style="font-size:8pt;">Screenshot of MacBook Pro graphics issue.<br/>Source: Apple Support Communities forum member "Andy_Gee"</font>
 </center>
@@ -226,6 +253,11 @@ This is the most important. <b>IF</b> there is going to be a replacement program
 <a id="tempfix"></a>
 <h2>Temporary fix</h2>
 
+<font size="1" color="red"><i>Disclaimer: Some users have stated they have trouble reversing this fix after performing it. I cannot help you if you have trouble with this, so proceed at your own risk.</i></font>
+
+<br />
+<br />
+
 Since the issue is with the <i>AMD Radeon GPU</i> chip, you'll need to "trick" your computer to only use the <i>integrated Intel GPU</i> only. This can be accomplished by hiding (some or all of) the AMD GPU driver files from the system. I don't take credit for this solution, numerous sites and forum posts provide it. If you follow the directions explicitly this is a safe and reversible procedure. Also please note this is NOT NOT NOT a permanent fix. Your computer will still act up in fairly random ways, but at least you can boot it.
 
 <ol>
@@ -245,7 +277,7 @@ Since the issue is with the <i>AMD Radeon GPU</i> chip, you'll need to "trick" y
 </ol>
 
 <center>
-<img src="../img/mbp_directions.png">
+<img src="img/MBP_GPU_directions.png">
 </center>
 <br />
 
@@ -351,6 +383,8 @@ Some of the GPU stress-testing applications I've toyed with are:
 </ul>
 I recommend the same <b>GpuTest</b> settings described by <a href="https://www.youtube.com/user/rossmanngroup" target="_new">Louis Rossmann</a> <a href="http://youtu.be/QRrUx3RbNl0" target="new">here</a>:
 <ul>
+<li /> <font color="red"><b>Note:</b> This may not be worth your time and energy.<br />
+It could take a significant amount of time for stress testing to wear your board down.</font>
 <li /> You may want to disable your "energy saving" settings and the screensaver.
 <li /> Run FurMark in "Fullscreen" mode with your computer's resolution and "8X MSAA antialiasing" turned on.
 <li /> Either:

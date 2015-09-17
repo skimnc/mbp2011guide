@@ -11,9 +11,9 @@ http://info.mbp2011.org/
 ## If you're going to edit, good info:
 
 1. Organization: please follow these guidelines:
-	- images go in /img/
+	- images go in /extras/img/
 	- html goes in /extras/
-	- plain.css in /
+	- CSS formatting in /dist/ and /css/
 
 2. Please submit changes through github to keep the page up to date.
 
